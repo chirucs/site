@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taj Mahal Electrical Contractor Inc.</title>
+    <!-- Import fonts and Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pO/2G6W330JjVwqWjX8C3PR0mZ6zqwxLUc4XfgeS4W91v1TjKzg+Nfcgt70iG95pprLNxviKRiXAyHEyH1z0ug==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">Taj Mahal Electrical</div>
+        <nav class="nav" id="navbar">
+          <a href="#about">About</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#why">Why Choose Us</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Get in Touch</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Trusted Electrical Contracting Solutions</h1>
+        <p>
+          Delivering reliable electrical and telecommunication services for residential, commercial and government projects across Pennsylvania and New Jersey.
+        </p>
+        <div class="hero-buttons">
+          <button class="primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});">Our Services</button>
+          <button class="secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Request a Quote</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container grid two-columns">
+        <div class="about-text">
+          <h2>Company Overview</h2>
+          <p>
+            Taj Mahal Electrical Contractor Inc. is a trusted electrical contracting firm specializing in comprehensive electrical utility services for residential, commercial and government projects across Pennsylvania. We have a proven track record of successfully delivering high‑quality electrical solutions and pride ourselves on our ability to manage complex projects from start to finish—efficiently, safely and within budget.
+          </p>
+          <p>
+            We maintain an excellent working relationship with the Department of General Services (DGS) in Pennsylvania and are actively involved in major ongoing DGS projects, including upgrades to the East Wing generator at the Pennsylvania Capitol Building, maintenance garage electrification and the electrical and security system scope at the State Correctional Institute in Muncy County.
+          </p>
+        </div>
+        <div class="about-image">
+          <!-- Decorative SVG graphic evokes circuitry -->
+          <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0a192f" />
+                <stop offset="100%" stop-color="#134e5e" />
+              </linearGradient>
+            </defs>
+            <rect width="600" height="400" fill="url(#grad)" />
+            <g stroke="#00c8ff" stroke-width="2" fill="none" opacity="0.5">
+              <path d="M20 50 H580 V350 H20 Z" />
+              <path d="M80 100 H520 V300 H80 Z" />
+              <circle cx="120" cy="150" r="8" />
+              <circle cx="480" cy="250" r="8" />
+              <line x1="120" y1="150" x2="480" y2="250" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="capabilities" class="section capabilities">
+      <div class="container">
+        <h2>Our Capabilities</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Medium Voltage Systems</h3>
+            <p>Expertise in transformers, switchgear and power distribution equipment to safely deliver electricity at scale.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Low Voltage Systems</h3>
+            <p>End‑to‑end solutions for lighting, controls and motor control centers to optimize energy efficiency.</p>
+          </div>
+          <div class="card">
+            <div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3>Telecommunications</h3>
+            <p>Design and installation of data cabling, fiber optics and networking infrastructure for seamless connectivity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Products & Services</h2>
+        <div class="service-grid">
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Electrical Utility Works</h3>
+            <p>Power distribution, panel installation and cable laying for reliable, code‑compliant infrastructure.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-battery-half"></i></div>
+            <h3>Medium & Low Voltage</h3>
+            <p>Transformer, switchgear and lighting system services for efficient energy management.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-wifi"></i></div>
+            <h3>Telecommunication Installations</h3>
+            <p>Data cabling, fiber optics and network setup for modern operations.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-check-double"></i></div>
+            <h3>Testing & Commissioning</h3>
+            <p>End‑to‑end validation and safety testing ensures systems are ready and compliant.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Security & Surveillance</h3>
+            <p>Installation of access control, cameras and alarms to enhance site safety and monitoring.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon"><i class="fa-solid fa-clipboard-list"></i></div>
+            <h3>Project Management</h3>
+            <p>Material logistics, workforce coordination and safety oversight for timely delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+          <div class="project-item">
+            <h3>East Wing Generator Upgrade</h3>
+            <p>Upgrading and replacing the generator system at the Pennsylvania Capitol Building’s East Wing to enhance reliability and backup power capacity for critical government operations.</p>
+          </div>
+          <div class="project-item">
+            <h3>Maintenance Garage Electrification</h3>
+            <p>Comprehensive electrification of state maintenance garages including power distribution, lighting upgrades and energy‑efficient controls.</p>
+          </div>
+          <div class="project-item">
+            <h3>State Correctional Institute, Muncy</h3>
+            <p>Providing electrical and security system scope at the Muncy facility, ensuring safe, modern and secure operations for correctional staff and inmates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta">
+      <div class="container">
+        <h2>Have a project? Need upgrades or maintenance?</h2>
+        <p>Our team can help you design, build and maintain electrical and communication systems tailored to your needs. Get in touch today to discuss your next project.</p>
+        <button class="primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact Us Today</button>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="section why">
+      <div class="container">
+        <h2>Why Choose Us?</h2>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-check-circle"></i> Experienced in government projects</li>
+          <li><i class="fa-solid fa-check-circle"></i> Strong relationships with regulatory bodies</li>
+          <li><i class="fa-solid fa-check-circle"></i> Skilled workforce certified in safety & technical expertise</li>
+          <li><i class="fa-solid fa-check-circle"></i> Turnkey project delivery from materials to commissioning</li>
+          <li><i class="fa-solid fa-check-circle"></i> Focus on compliance, safety & quality</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-wrapper">
+          <div class="contact-details">
+            <p><span class="contact-icon">📍</span> 53 Knightsbridge Road, Piscataway, NJ 08854</p>
+            <p><span class="contact-icon">📞</span> <a href="tel:+19088345459">+1 908 834 5459</a></p>
+            <p><span class="contact-icon">✉️</span> <a href="mailto:rajeshp@tajmahalelectrical.com">rajeshp@tajmahalelectrical.com</a></p>
+          </div>
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-row">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-row">
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p>&copy; <span id="year"></span> Taj Mahal Electrical Contractor Inc. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+      // Set the copyright year dynamically
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Responsive navigation toggle for small screens
+      const navToggle = document.getElementById('navToggle');
+      const nav = document.getElementById('navbar');
+      navToggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Taj Mahal Electrical Contractor Inc.</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO/2G6W330JjVwqWjX8C3PR0mZ6zqwxLUc4XfgeS4W91v1TjKzg+Nfcgt70iG95pprLNxviKRiXAyHEyH1z0ug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">Taj Mahal Electrical</div>
+        <nav class="nav" id="navbar-contact">
+          <a href="index.html#about">About</a>
+          <a href="index.html#capabilities">Capabilities</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#why">Why Choose Us</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="cta-button" onclick="location.href='contact.html'">Get in Touch</button>
+        <button class="nav-toggle" id="navToggleContact" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="hero hero-sm">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Contact Us</h1>
+        <p>
+          We’re here to answer your questions and provide estimates for your
+          electrical and telecommunications projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section class="section contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-wrapper">
+          <div class="contact-details">
+            <p><span class="contact-icon">📍</span> 53 Knightsbridge Road, Piscataway, NJ 08854</p>
+            <p><span class="contact-icon">📞</span> <a href="tel:+19088345459">+1 908 834 5459</a></p>
+            <p><span class="contact-icon">✉️</span> <a href="mailto:rajeshp@tajmahalelectrical.com">rajeshp@tajmahalelectrical.com</a></p>
+          </div>
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-row">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-row">
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p>&copy; <span id="contact-year"></span> Taj Mahal Electrical Contractor Inc. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('contact-year').textContent = new Date().getFullYear();
+      const navToggleContact = document.getElementById('navToggleContact');
+      const navbarContact = document.getElementById('navbar-contact');
+      navToggleContact.addEventListener('click', () => {
+        navbarContact.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
