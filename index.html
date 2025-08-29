@@ -14,7 +14,7 @@
     <!-- Header -->
     <header class="site-header">
       <div class="container">
-        <div class="logo">Taj Mahal Electrical</div>
+        <div class="logo">Taj Mahal Electrical Contractor Inc.</div>
         <nav class="nav" id="navbar">
           <a href="#about">About</a>
           <a href="#capabilities">Capabilities</a>
@@ -142,22 +142,77 @@
       </div>
     </section>
 
+    <!-- Metrics -->
+    <section id="metrics" class="section metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="icon"><i class="fa-solid fa-check-circle"></i></div>
+            <h3 class="counter" data-target="11">0</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="metric-item">
+            <div class="icon"><i class="fa-solid fa-users"></i></div>
+            <h3 class="counter" data-target="25">0</h3>
+            <p>Satisfied Clients</p>
+          </div>
+          <div class="metric-item">
+            <div class="icon"><i class="fa-solid fa-dollar-sign"></i></div>
+            <h3 class="counter" data-target="20">0</h3>
+            <p>Million Revenue</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section id="projects" class="section projects">
       <div class="container">
         <h2>Featured Projects</h2>
         <div class="project-grid">
           <div class="project-item">
-            <h3>East Wing Generator Upgrade</h3>
-            <p>Upgrading and replacing the generator system at the Pennsylvania Capitol Building’s East Wing to enhance reliability and backup power capacity for critical government operations.</p>
+            <h3>Meridia on Hackensack</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for Apartments</p>
           </div>
           <div class="project-item">
-            <h3>Maintenance Garage Electrification</h3>
-            <p>Comprehensive electrification of state maintenance garages including power distribution, lighting upgrades and energy‑efficient controls.</p>
+            <h3>Meridia on West Field, Roselle Park</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for Apartments</p>
           </div>
           <div class="project-item">
-            <h3>State Correctional Institute, Muncy</h3>
-            <p>Providing electrical and security system scope at the Muncy facility, ensuring safe, modern and secure operations for correctional staff and inmates.</p>
+            <h3>Meridia Brownstones Urban Renewal, 171 Unit Apartment Building</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for 171 Apartments</p>
+          </div>
+          <div class="project-item">
+            <h3>Essex County College</h3>
+            <p>Infotech Alteration and Renovation</p>
+          </div>
+          <div class="project-item">
+            <h3>New Emergency Services Complex Project</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for Fire Department & Emergency Department</p>
+          </div>
+          <div class="project-item">
+            <h3>6-8 Gates Avenue</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for Apartments</p>
+          </div>
+          <div class="project-item">
+            <h3>Amarnath at Fords, Woodbridge, Urban Renewal LLC , Metuchen, NJ 56 Unit Apt building</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for 56 Apartments</p>
+          </div>
+          <div class="project-item">
+            <h3>Hopkinson Project, 64 unit Apartment building</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for 64 Apartments</p>
+          </div>
+          <div class="project-item">
+            <h3>Emerson Redevelopers Urban Renewal, LLC. 147 Unit Apartment Building</h3>
+            <p>Planning, Procurement and Construction of Electrical & Fire Alarm system for 147 Apartments</p>
+          </div>
+          <div class="project-item">
+            <h3>East Wing & Main capital Upgrade/Replace Emergency Generator</h3>
+            <p>Demo & Installation of new 1000KVA Generator & ATS system for East Wing & capitol hill Building</p>
+          </div>
+          <div class="project-item">
+            <h3>District 2-7 Maintenance Garage - Construction of a New County Maintenance Garage</h3>
+            <p>Construction of new County Maintenance Garage</p>
           </div>
         </div>
       </div>
@@ -234,6 +289,45 @@
       navToggle.addEventListener('click', () => {
         nav.classList.toggle('open');
       });
+
+      // Counter animation
+      const counters = document.querySelectorAll('.counter');
+      const speed = 800; // This value influences the increment; a higher value means smaller increments.
+
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const inc = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 80); // Increased timeout for slower animation
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      // Intersection Observer to trigger animation on scroll
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      const metricsSection = document.querySelector('.metrics');
+      if (metricsSection) {
+        observer.observe(metricsSection);
+      }
     </script>
   </body>
 </html>
+
